@@ -1,3 +1,7 @@
+---
+layout: default
+title: Guía de instalación de Pandas
+---
 # Guía práctica: GitHub, Git Bash y entorno virtual para Pandas
 
 **Módulo:** Herramientas para Inteligencia Artificial  
