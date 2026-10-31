@@ -34,7 +34,7 @@ kaggle datasets status TU_USUARIO/ventas-comerciales-peru
 ```json
 {
   "title": "Ventas comerciales de Peru - Datos sinteticos",
-  "id": "TU_USUARIO/ventas-comerciales-peru",
+  "id": "TU_USUARIO/ventas",
   "licenses": [
     {"name": "CC0-1.0"}
   ]
@@ -61,7 +61,7 @@ kaggle datasets status TU_USUARIO/ventas-comerciales-peru
 kaggle datasets status TU_USUARIO/ventas-comerciales-peru --format json
 ```
 
-**Importante:** para actualizar, usa `version`, **no** `init` ni `create`. No agregues `-d` o `--delete-old-versions` si quieres conservar las versiones anteriores.
+**Importante:** para actualizar, usa `version`
 
 ### Referencia oficial
 
