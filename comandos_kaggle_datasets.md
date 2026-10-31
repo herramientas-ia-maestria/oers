@@ -1,13 +1,13 @@
 # Kaggle CLI: crear y actualizar datasets
 
-Guía rápida para ejecutar desde **Ubuntu**, dentro de una **carpeta independiente** que contiene los archivos del dataset. No requiere Git ni un repositorio de GitHub.
+Guía para ejecutar desde un termina/CMD, dentro de una **carpeta independiente** que contendrá los archivos del dataset. No requiere Git ni un repositorio de GitHub.
 
 ## Bloque 1. Crear un dataset nuevo
 
-La carpeta debe contener el archivo que deseas publicar, por ejemplo `ventas_peru_pandas_polars.csv`.
+La carpeta debe contener el archivo que desea publicar, por ejemplo `ventas.csv`.
 
 ```bash
-# Instalar Kaggle CLI (una sola vez, en el entorno Python que uses)
+# Instalar Kaggle CLI (una sola vez, en el entorno Python que uses), dentro de un entorno virtual
 python -m pip install kaggle
 
 # Iniciar sesión en Kaggle (una sola vez, o cuando sea necesario)
@@ -16,8 +16,11 @@ kaggle auth login
 # Crear el archivo dataset-metadata.json en la carpeta actual
 kaggle datasets init -p .
 
+# Agregar el dataset
+Agregar el dataset en la carpeta
+
 # Editar los metadatos
-nano dataset-metadata.json
+abrir el archivo dataset-metadata.json
 
 # Publicar como dataset público
 kaggle datasets create -p . --public
