@@ -1,13 +1,13 @@
 # Kaggle CLI: crear y actualizar datasets
 
-Guía rápida para ejecutar desde **Ubuntu**, dentro de una **carpeta independiente** que contiene los archivos del dataset. No requiere Git ni un repositorio de GitHub.
+Guía para ejecutar desde un termina/CMD, dentro de una **carpeta independiente** que contendrá los archivos del dataset. No requiere Git ni un repositorio de GitHub.
 
 ## Bloque 1. Crear un dataset nuevo
 
-La carpeta debe contener el archivo que deseas publicar, por ejemplo `ventas_peru_pandas_polars.csv`.
+La carpeta debe contener el archivo que desea publicar, por ejemplo `ventas.csv`.
 
 ```bash
-# Instalar Kaggle CLI (una sola vez, en el entorno Python que uses)
+# Instalar Kaggle CLI (una sola vez, en el entorno Python que uses), dentro de un entorno virtual
 python -m pip install kaggle
 
 # Iniciar sesión en Kaggle (una sola vez, o cuando sea necesario)
@@ -16,8 +16,11 @@ kaggle auth login
 # Crear el archivo dataset-metadata.json en la carpeta actual
 kaggle datasets init -p .
 
+# Agregar el dataset
+Agregar el dataset en la carpeta
+
 # Editar los metadatos
-nano dataset-metadata.json
+abrir el archivo dataset-metadata.json
 
 # Publicar como dataset público
 kaggle datasets create -p . --public
@@ -31,7 +34,7 @@ kaggle datasets status TU_USUARIO/ventas-comerciales-peru
 ```json
 {
   "title": "Ventas comerciales de Peru - Datos sinteticos",
-  "id": "TU_USUARIO/ventas-comerciales-peru",
+  "id": "TU_USUARIO/ventas",
   "licenses": [
     {"name": "CC0-1.0"}
   ]
@@ -46,7 +49,7 @@ Sustituye o modifica el CSV **en la misma carpeta**, conservando `dataset-metada
 
 ```bash
 # Revisar los archivos de la carpeta actual
-ls -lh
+ls -lh en Linux o Mac / dir en Windows
 
 # Publicar una nueva versión con los archivos actualizados
 kaggle datasets version -p . -m "Ampliación a 100000 registros"
@@ -58,7 +61,7 @@ kaggle datasets status TU_USUARIO/ventas-comerciales-peru
 kaggle datasets status TU_USUARIO/ventas-comerciales-peru --format json
 ```
 
-**Importante:** para actualizar, usa `version`, **no** `init` ni `create`. No agregues `-d` o `--delete-old-versions` si quieres conservar las versiones anteriores.
+**Importante:** para actualizar, usa `version`
 
 ### Referencia oficial
 
