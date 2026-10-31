@@ -49,7 +49,7 @@ Sustituye o modifica el CSV **en la misma carpeta**, conservando `dataset-metada
 
 ```bash
 # Revisar los archivos de la carpeta actual
-ls -lh
+ls -lh en Linux o Mac / dir en Windows
 
 # Publicar una nueva versión con los archivos actualizados
 kaggle datasets version -p . -m "Ampliación a 100000 registros"
